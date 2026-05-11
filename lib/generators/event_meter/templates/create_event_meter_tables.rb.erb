@@ -1,0 +1,12 @@
+class CreateEventMeterTables < ActiveRecord::Migration[7.0]
+  def up
+    execute <<~SQL
+<%= indented_migration_sql %>    SQL
+  end
+
+  def down
+    drop_table :<%= table_prefix %>_processed_entries, if_exists: true
+    drop_table :<%= table_prefix %>_strings, if_exists: true
+    drop_table :<%= table_prefix %>_rollups, if_exists: true
+  end
+end

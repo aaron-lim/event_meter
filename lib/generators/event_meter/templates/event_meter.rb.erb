@@ -1,0 +1,12 @@
+require "event_meter/rails"
+
+EventMeter::Rails.configure(
+  namespace: "<%= namespace %>",
+  stream_storage: :file,
+  stream_path: Rails.root.join("tmp/event_meter/<%= namespace.tr(':', '-') %>").to_s,
+  rollup_storage: :postgres,
+  table_prefix: "<%= table_prefix %>",
+  stream_sync: :flush,
+  auto_cleanup_history: true,
+  logger: Rails.logger
+)

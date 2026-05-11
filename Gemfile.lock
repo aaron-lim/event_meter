@@ -1,0 +1,33 @@
+PATH
+  remote: .
+  specs:
+    event_meter (0.1.0)
+      time_bucket_stream (~> 0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    connection_pool (3.0.2)
+    minitest (5.27.0)
+    pg (1.6.3)
+    pg (1.6.3-arm64-darwin)
+    rake (13.4.2)
+    redis (5.4.1)
+      redis-client (>= 0.22.0)
+    redis-client (0.28.0)
+      connection_pool
+    time_bucket_stream (0.1.0)
+
+PLATFORMS
+  arm64-darwin-24
+  ruby
+
+DEPENDENCIES
+  event_meter!
+  minitest (~> 5.0)
+  pg (~> 1.5)
+  rake (~> 13.0)
+  redis (>= 5.0, < 6.0)
+
+BUNDLED WITH
+   2.6.9
